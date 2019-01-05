@@ -1,27 +1,27 @@
 var friends = [
 	{
 		name: "Superman",
-		photo: "http://dc.wikia.com/wiki/Superman_(Clark_Kent)?file=Superman_0002.jpg",
+		photo: "https://vignette.wikia.nocookie.net/marvel_dc/images/4/43/Action_Comics_Vol_1_976_Variant_Textless.png/revision/latest?cb=20180811210911",
 		scores: [5, 1, 2, 3, 1, 2, 5, 1, 1, 1]
 	},
 	{
 		name: "Wonder Woman",
-		photo: "http://dc.wikia.com/wiki/Diana_of_Themyscira_(Prime_Earth)?file=Wonder_Woman_Vol_5_4_Textless.jpg",
+		photo: "https://vignette.wikia.nocookie.net/marvel_dc/images/c/cc/Wonder_Woman_Vol_5_4_Textless.jpg/revision/latest?cb=20160810132845",
 		scores: [2, 5, 4, 1, 2, 3, 3, 2, 3, 3]
 	},
 	{
 		name: "Batman",
-		photo: "http://dc.wikia.com/wiki/Bruce_Wayne_(Prime_Earth)?file=Batman_Vol_2_2_Variant_Textless.jpg",
+		photo: "https://vignette.wikia.nocookie.net/marvel_dc/images/a/a6/Batman_Vol_2_2_Variant_Textless.jpg/revision/latest?cb=20120228075313",
 		scores: [1, 1, 5, 3, 3, 5, 1, 2, 3, 4]
 	},
 	{
 		name: "Robin",
-		photo: "http://dc.wikia.com/wiki/Damian_Wayne_(Prime_Earth)?file=Teen_Titans_Rebirth_Vol_1_1_Textless.jpg",
+		photo: "https://vignette.wikia.nocookie.net/marvel_dc/images/6/61/Teen_Titans_Rebirth_Vol_1_1_Textless.jpg/revision/latest?cb=20160518052637",
 		scores: [3, 1, 3, 5, 2, 3, 2, 2, 5, 5]
 	},
 	{
 		name: "Aquaman",
-		photo: "http://dc.wikia.com/wiki/Arthur_Curry_(Prime_Earth)?file=Aquaman_0176.jpg",
+		photo: "https://vignette.wikia.nocookie.net/marvel_dc/images/9/9b/Aquaman_0176.jpg/revision/latest?cb=20110909221325",
 		scores: [3, 1, 4, 4, 2, 4, 2, 5, 1, 3]
 	}
 ];

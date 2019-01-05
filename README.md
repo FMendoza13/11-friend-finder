@@ -27,5 +27,11 @@ To use the Super Friend Finder, visit our homepage and take our thorough and pre
 - HTML
 - Bootstrap
 
+# Code Description
+- First off, the "server.js" file sets up the Express server, which designates a port number, the npm packages that need to be implemented, along with routes that we have externalized.  
+- I needed to create two seperate HTML files titled "home.html" and "survey.html that will be the front-end portion the friend finder, determining what the participant will view in regards to the homepage and the survey (that will also give the results of said survey).
+- The two routing files that are titled "htmlRoutes.js" and "apiRoutes.js" are designated for functionality. For the back-end logic, depending on which request is being made, the response gets sent to the browser. The HTML routes display the survey and the homepage based on the URL that is accessed, and the API routes send back existing content in our server-side data or add new friends.  
+- With each survey taken, the score is matched with other scores that have minimal difference, which sends the friend to the browser as a JSON object.
+- Finally, a modal is triggered, showing the best match to the recent survey participant.  
 # Author
 Fernando Mendoza
