@@ -4,7 +4,7 @@
 	<title>Survey - Super Friends Finder</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Audiowide|Bangers|Righteous|ZCOOL+QingKe+HuangYou" rel="stylesheet">
 
 </head>
@@ -22,7 +22,7 @@
 			<div class="form-group">
 				<label for="question1">I'd rather go out at night rather than stay in.</label>
 				<select class="form-control" id="question1">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -33,7 +33,7 @@
 			<div class="form-group">
 				<label for="question2">I like long walks on the beach.</label>
 				<select class="form-control" id="question2">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -44,7 +44,7 @@
 			<div class="form-group">
 				<label for="question3">I like days when it rains.</label>
 				<select class="form-control" id="question3">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -55,7 +55,7 @@
 			<div class="form-group">
 				<label for="question4">I'd rather be out in the sun rather than home in front of a computer.</label>
 				<select class="form-control" id="question4">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -66,7 +66,7 @@
 			<div class="form-group">
 				<label for="question5">I don't sweat the details.</label>
 				<select class="form-control" id="question5">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -77,7 +77,7 @@
 			<div class="form-group">
 				<label for="question6">Things don't come naturally to me, I have to work hard for everything.</label>
 				<select class="form-control" id="question6">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -88,7 +88,7 @@
 			<div class="form-group">
 				<label for="question7">I've had many relationships.</label>
 				<select class="form-control" id="question7">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -99,7 +99,7 @@
 			<div class="form-group">
 				<label for="question8">I am a cat person.</label>
 				<select class="form-control" id="question8">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -110,7 +110,7 @@
 			<div class="form-group">
 				<label for="question9">I believe in honesty over deception.</label>
 				<select class="form-control" id="question9">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -121,7 +121,7 @@
 			<div class="form-group">
 				<label for="question10">I will use lethal force.</label>
 				<select class="form-control" id="question10">
-					<option></option>
+					<option value="empty"></option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
@@ -139,7 +139,7 @@
 			  <div class="modal-content">
 				<div class="modal-header">
 				  <button type="button" class="close" data-dismiss="modal">&times;</button>
-				  <h1 class="modal-title">Your New Super Friend</h1>
+				  <h3 class="modal-title">Your New Super Friend</h3>
 				</div>
 				<div class="modal-body">
 				  <h2 id="bestFriend"></h2>
@@ -170,31 +170,41 @@
 <script type="text/javascript">
 	$("#submitBtn").on("click", function(event) {
 		event.preventDefault();
-		var newUser = {
-			name: $("#name").val().trim(),
-			photo: $("#photo").val().trim(),
-			scores: [
-				$("#question1").val(),
-				$("#question2").val(),
-				$("#question3").val(),
-				$("#question4").val(),
-				$("#question5").val(),
-				$("#question6").val(),
-				$("#question7").val(),
-				$("#question8").val(),
-				$("#question9").val(),
-				$("#question10").val()
-			]
-		};
-		console.log(newUser);
-		var currentURL = window.location.origin;
+		var valid = true;
+
+		if($("#name").val() === "" || $("#photo").val() === "") {
+			valid = false;
+		} else if($("#question1").val() === "empty" || $("#question2").val() === "empty" || $("#question3").val() === "empty" || $("#question4").val() === "empty" || $("#question5").val() === "empty" || $("#question6").val() === "empty" || $("#question7").val() === "empty" || $("#question8").val() === "empty" || $("#question9").val() === "empty" || $("#question10").val() === "empty") {
+			valid = false;
+		}
+
+		if(valid === true) {
+			var newUser = {
+				name: $("#name").val().trim(),
+				photo: $("#photo").val().trim(),
+				scores: [
+					$("#question1").val(),
+					$("#question2").val(),
+					$("#question3").val(),
+					$("#question4").val(),
+					$("#question5").val(),
+					$("#question6").val(),
+					$("#question7").val(),
+					$("#question8").val(),
+					$("#question9").val(),
+					$("#question10").val()
+				]
+			};
+			var currentURL = window.location.origin;
+
 		$.post(currentURL + "/api/friends", newUser, function(data) {
 			$("#bestFriend").text(data.name);
-			console.log(data.photo);
 			$("bestFriendPhoto").attr("src", data.photo);
-
 			$("#bestFriendModal").modal("toggle");
 		});
+	} else {
+		alert("Hold good citizen! Survey is incomplete");
+	}
 	});
 </script> 
   
