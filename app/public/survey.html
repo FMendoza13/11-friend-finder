@@ -143,7 +143,7 @@
 				</div>
 				<div class="modal-body">
 				  <h2 id="bestFriend"></h2>
-				  <img id="bestFriendPhoto" src="#">
+				  <img id="bestFriendPhoto" src="">
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -185,16 +185,16 @@
 				name: $("#name").val().trim(),
 				photo: $("#photo").val().trim(),
 				scores: [
-					parseInt($("#question1").val()),
-					parseInt($("#question2").val()),
-					parseInt($("#question3").val()),
-					parseInt($("#question4").val()),
-					parseInt($("#question5").val()),
-					parseInt($("#question6").val()),
-					parseInt($("#question7").val()),
-					parseInt($("#question8").val()),
-					parseInt($("#question9").val()),
-					parseInt($("#question10").val())
+					$("#question1").val(),
+					$("#question2").val(),
+					$("#question3").val(),
+					$("#question4").val(),
+					$("#question5").val(),
+					$("#question6").val(),
+					$("#question7").val(),
+					$("#question8").val(),
+					$("#question9").val(),
+					$("#question10").val()
 				]
 			};
 			var currentURL = window.location.origin;
